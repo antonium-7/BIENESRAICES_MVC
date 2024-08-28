@@ -1,0 +1,28 @@
+header.bg-indigo-600.p-4
+    .container.mx-auto.flex.justify-between.items-center
+        a(href="/")
+            h1.text-2xl.text-white.font-extrabold.text-center Bienes
+                span.font-normal Raices
+
+        // Menú para versión de escritorio
+        nav(class="my-5 text-sm md:flex md:items-center md:gap-3 font-bold text-white items-center hidden")
+            a(href="/mis-propiedades") Mis propiedades
+            a(href="/perfil") Mi perfil
+
+            form(action="/auth/cerrar-sesion" method="POST") 
+                input(type="hidden" name="_csrf" value=csrfToken)
+                input(type="submit" class="bg-indigo-800 py-2 px-10 rounded-lg" value="Cerrar Sesión")
+
+        // Menú hamburguesa para móvil
+        a(class="block text-4xl md:hidden items-center justify-center h-full") 
+            button#menu-btn(type="button" class="text-white items-center justify-center") &#9776;
+
+        // Menú desplegable para móvil
+        div(id="menu-items" class="fixed top-0 right-0 h-full w-64 bg-indigo-600 p-4 pt-10 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden")
+            nav(class="flex flex-col text-sm font-bold text-white items-center gap-3")
+                a(href="/mis-propiedades" class="py-2") Mis propiedades
+                a(href="/perfil" class="py-2") Mi perfil
+
+                form(action="/auth/cerrar-sesion" method="POST" class="py-2") 
+                    input(type="hidden" name="_csrf" value=csrfToken)
+                    input(type="submit" class="bg-indigo-800 py-2 px-10 rounded-lg" value="Cerrar Sesión")

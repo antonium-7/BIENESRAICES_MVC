@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leaflet-container a {
+    color: #fff;
+}
+
+.my-2-important{
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.leaflet-popup-content {
+    margin: 13px 13px 13px 13px;
+}
