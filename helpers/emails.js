@@ -15,7 +15,7 @@ const emailRegistro = async (datos) => {
 
     // Enviar el mail
     await transport.sendMail({
-        from: process.env.EMAIL_USER,
+        from: 'somos@ellab.digital',
         to: email,
         subject: 'Confirma tu Cuenta en BienesRaices.com',
         text: 'Confirma tu Cuenta en BienesRaices.com',
@@ -45,7 +45,7 @@ const emailOlvidePassword = async (datos) => {
 
     // Enviar el mail
     await transport.sendMail({
-        from: process.env.EMAIL_USER,
+        from: 'somos@ellab.digital',
         to: email,
         subject: 'Restablece tu Password en BienesRaices.com',
         text: 'Restablece tu Password en BienesRaices.com',
